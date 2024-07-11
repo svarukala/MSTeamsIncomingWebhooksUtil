@@ -70,7 +70,7 @@ while($url -notlike ""){
     if ($result -notlike "Error:*"){
         $i=1
         $array=foreach($line in $result.value){
-            @{"id"=$i;"method"="GET";"url"="/teams/$($line.id)/installedApps?`$expand=teamsAppDefinition&`$filter=teamsAppDefinition/id eq 'MjAzYTFlMmMtMjZjYy00N2NhLTgzYWUtYmU5OGY5NjBiNmIyIyMxLjAjI1B1Ymxpc2hlZA=='"} #"MjAzYTFlMmMtMjZjYy00N2NhLTgzYWUtYmU5OGY5NjBiNmIyIyMxLjAjI1B1Ymxpc2hlZA=="
+            @{"id"=$i;"method"="GET";"url"="/teams/$($line.id)/installedApps?`$expand=teamsAppDefinition&`$filter=teamsAppDefinition/id eq '$($incomingWebhookAppId)'"} #"MjAzYTFlMmMtMjZjYy00N2NhLTgzYWUtYmU5OGY5NjBiNmIyIyMxLjAjI1B1Ymxpc2hlZA=="
             $i++
         }
         $body=@{"requests"=$array}|ConvertTo-Json   
