@@ -3,22 +3,22 @@ $clientId = "*******CLIENT ID*********"
 $clientSecret = "*******CLIENT SECRET*********"
 $tenantId = "*******TENANT ID*********"
 
+# The incoming webhook app id to filter the installed apps for each Team
+$incomingWebhookAppId = "MjAzYTFlMmMtMjZjYy00N2NhLTgzYWUtYmU5OGY5NjBiNmIyIyMxLjAjI1B1Ymxpc2hlZA=="
 
+# Get Access Token using OAuth 2.0, client-credentials flow
 $uri = "https://login.microsoftonline.com/$tenantId/oauth2/v2.0/token"
-
 $Body = @{    
     Grant_Type    = "client_credentials"
     Scope         = "https://graph.microsoft.com/.default"
     client_Id     = $clientId
     Client_Secret = $clientSecret
 } 
-
 $authToken = Invoke-RestMethod -Uri $uri -Method POST -Body $Body
 $accessTokenValue = $authToken.access_token
 
 # Use the access token for further operations
-# ...
-
+# Get the list of Teams using the incoming webhooks
 $path = read-host "Enter Path to report location ending in .csv"
 
 function Get-GraphResult($url,$token){
@@ -52,8 +52,6 @@ function Get-GraphPost($url,$token, $body){
 }
 
 #check for temp file to see this is a resumed attempt
-
-
 $url=get-content "$env:TEMP\webhook.tmp" -ea 0 
 
 
