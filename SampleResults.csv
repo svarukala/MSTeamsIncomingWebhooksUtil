@@ -1,0 +1,5 @@
+"id","displayName","hasIncomingWebhook","owners"
+"3defcb00-e7e2-403e-a108-9f82042ec06b","Project Apex","Yes","admin@Contoso.onmicrosoft.com"
+"db67d97c-eec4-4b8b-99c1-8d8ce4dbf51d","Contoso marketing","Yes","admin@Contoso.onmicrosoft.com"
+"5462384f-bf62-4441-a55f-51f6ef45c4b8","U.S. Sales","Yes","admin@Contoso.onmicrosoft.com;IsaiahL@Contoso.OnMicrosoft.com;MeganB@Contoso.OnMicrosoft.com"
+"33bfe2b8-6c3b-48f9-bb24-7599dda4855c","Sales and Marketing","Yes","admin@Contoso.onmicrosoft.com;JohannaL@Contoso.OnMicrosoft.com;NestorW@Contoso.OnMicrosoft.com;IsaiahL@Contoso.OnMicrosoft.com;MeganB@Contoso.OnMicrosoft.com;MiriamG@Contoso.OnMicrosoft.com"
