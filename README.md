@@ -1,5 +1,6 @@
 # MS Teams IncomingWebhooks Util
 Disclaimer: This script is provided as a sample as-is. 
+
 Purpose: Enumerates the incoming webhooks for all the Teams. This sample script is using Client ID and Secret and runs in the application context.
 
 # Steps 1
