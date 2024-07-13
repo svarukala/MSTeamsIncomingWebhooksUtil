@@ -1,7 +1,9 @@
 # MS Teams IncomingWebhooks Util
-Disclaimer: This script is provided as a sample as-is. 
+**Disclaimer: This script is provided as a sample as-is.**
 
-Purpose: Enumerates the incoming webhooks for all the Teams. This sample script is using Client ID and Secret and runs in the application context.
+**Purpose:** Enumerates the Teams that are using incoming webhooks. It is not possible to provide the Channel specific info. 
+
+Note: This sample script is using Client ID and Secret and runs in the application context.
 
 # Steps 1
 1. Register Entra App ID. While registering the app:
@@ -14,7 +16,7 @@ Purpose: Enumerates the incoming webhooks for all the Teams. This sample script 
     * TeamsAppInstallation.Read.All
 
 # Step 2
-1. Udate the script with the Tenant Id, Client id, and Client Secret.
+1. Update the script with the Tenant Id, Client id, and Client Secret.
 2. Run the script
 
 # Output
