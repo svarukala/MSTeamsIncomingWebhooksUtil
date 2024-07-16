@@ -186,7 +186,7 @@ Write-Host "$(Get-Date -Format yyyyMMdd-hh:mm:ss.ffff) - Connecting to Graph API
 Connect-MgGraph -Scopes "Team.ReadBasic.All", "TeamsAppInstallation.ReadForTeam", "AppCatalog.Read.All" -NoWelcome
 
 Write-Host "$(Get-Date -Format yyyyMMdd-hh:mm:ss.ffff) - Getting all teams in tenant"
-$Teams = Get-MgTeam
+$Teams = Get-MgTeam -All
 $TotalTeamsCount = $($Teams.count)
 Write-Host "$(Get-Date -Format yyyyMMdd-hh:mm:ss.ffff) - Found $TotalTeamsCount teams"
 
