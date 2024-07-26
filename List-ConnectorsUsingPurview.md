@@ -24,7 +24,7 @@ Note: By default, this cmdlet returns a subset of results containing up to 100 r
 
 The CSV report generated using the above method contains a JSON formatted column header **"AuditData"** that contains a lot of useful information including Team name/id, Channel name etc. 
 
-You can split the "AuditData" column using Excel. Follow below instructions:
+You can split the "AuditData" column by opening the CSV file in Excel. Follow below instructions:
 1. Open the CSV in Excel.
 2. Select the column in excel.
 3. Go to the Data tab and select From Table/Range. Excel will ask if your data has headers. Click OK. That opens the Power Query editor. 
@@ -34,7 +34,7 @@ You can split the "AuditData" column using Excel. Follow below instructions:
 7. Select the fields you want to expand and click OK.
 
 
-Use below PowerShell to expand that column and save to a new file with the expanded columns:
+Alternately, use below PowerShell to expand that column and save to a new file with the expanded columns:
 
 ```powershell
 # Path to the CSV file
@@ -63,4 +63,5 @@ $expandJsonColumns = {
 $expandedData = & $expandJsonColumns
 
 # Export the expanded data to a new CSV file
+$expandedData | Export-Csv -Path "C:\path\to\your\expanded_file.csv" -NoTypeInformation
 ```

@@ -6,7 +6,7 @@ Option 1: **List-TeamsWithConenctors.ps1**
 
 This script is comprehensive as it outputs all the connectors (including incoming webhooks, 1st and 3rd party connectors) used in all the Teams in your Tenant. And this script can by run by the global admin and doesnt need any additional setup requirements.
 
-Below GUID can be used to filter the spreadsheet to limit the results to Incoming Webhooks
+Below GUID can be used to filter the **Add On Guid** column in the csv/spreadsheet to limit the results to Incoming Webhooks
 203a1e2c-26cc-47ca-83ae-be98f960b6b2
 
 
