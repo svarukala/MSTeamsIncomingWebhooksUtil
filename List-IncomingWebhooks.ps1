@@ -114,7 +114,7 @@ while($url -notlike ""){
                     $getownerbatcharray += @{"id"=$getownerbatchindex;"method"="GET";"url"="/groups/$($groupid)?`$expand=owners&`$select=id,displayName,owners"};
                     $getownerbatchindex++
 
-                    if($getownerbatchindex -gt 15){
+                    if($getownerbatchindex -gt 15 -or $getownerbatchindex -eq $appIdresults.count){
                         $body=@{"requests"=$getownerbatcharray}|ConvertTo-Json
                         $ownerresults=Get-GraphPost -url "https://graph.microsoft.com/v1.0/`$batch" -token $accessTokenValue -body $body
                         $getownerbatchindex=1    

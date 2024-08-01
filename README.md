@@ -16,14 +16,30 @@ Below GUID can be used to filter the **Add On Guid** column in the csv/spreadshe
 Enumerates the Teams that are using incoming webhooks. This sample script is using Client ID and Secret and runs in the application context. You must follow below steps as pre-requisites to run the script.
 
 #### Steps 1
-1. Register Entra App ID. While registering the app:
+1. Navigate to Azure Portal: https://portal.azure.com. Search for "Entra ID" and open it.
+![alt text](images/Open-entraid.png)
+2. Open **App registrations** under **Manage** in the left nav.
+![alt text](images/Open-appreg.png)
+3. Click **+ New registration** to register a new Entra App. While registering the app:
     * Provide Name
     * Selet Accounts in this org directory only (Single Tenant)
     * Rediret URI - empty
-2. Gather the Tenant Id, Client Id, Client Secret
-3. Ensure below application permissions are added and admin consent granted.
+    ![alt text](images/Reg-app.png)
+4. Gather the Tenant Id, Client Id
+    ![alt text](images/Tid-Cid.png)
+5. Create Client Secret by navigating to **Certificates & secrets** under **Manage**
+    ![alt text](images/Create-secret.png)
+    ![alt text](images/Add-secret.png)
+6. Copy the secret
+    ![alt text](images/Copy-secret.png)
+7. Navigate to **API permissions** under **Manage**. Click **+ Add a permission**. In the pop-up select **Microsoft Graph**. Then select **Application permissions** block. 
+8. Ensure below application permissions are added
     * Group.Read.All
     * TeamsAppInstallation.Read.All
+9. Click on **Grant admin consent...** button to grant the selected permissions
+    ![alt text](images/Graph-perms.png)
+    
+    NOTE: If you do not grant admin consent, the access token fetched will not have the right scopes and the graph query will results in a 403 error.
 
 #### Step 2
 1. Update the script with the Tenant Id, Client id, and Client Secret.
