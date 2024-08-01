@@ -17,11 +17,12 @@ Enumerates the Teams that are using incoming webhooks. This sample script is usi
 
 #### Steps 1
 1. Navigate to Azure Portal: https://portal.azure.com. Search for "Entra ID" and open it.
-![alt text](Images/Open-entraid.png)
+
+    ![alt text](Images/Open-entraid.png)
 
 2. Open **App registrations** under **Manage** in the left nav.
 
-![alt text](Images/Open-appreg.png)
+    ![alt text](Images/Open-appreg.png)
 
 3. Click **+ New registration** to register a new Entra App. While registering the app:
     * Provide Name
