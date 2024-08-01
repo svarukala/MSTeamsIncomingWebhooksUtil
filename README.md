@@ -18,25 +18,40 @@ Enumerates the Teams that are using incoming webhooks. This sample script is usi
 #### Steps 1
 1. Navigate to Azure Portal: https://portal.azure.com. Search for "Entra ID" and open it.
 ![alt text](Images/Open-entraid.png)
+
 2. Open **App registrations** under **Manage** in the left nav.
+
 ![alt text](Images/Open-appreg.png)
+
 3. Click **+ New registration** to register a new Entra App. While registering the app:
     * Provide Name
     * Selet Accounts in this org directory only (Single Tenant)
     * Rediret URI - empty
+
     ![alt text](Images/Reg-app.png)
+
 4. Gather the Tenant Id, Client Id
+
     ![alt text](Images/Tid-Cid.png)
+
 5. Create Client Secret by navigating to **Certificates & secrets** under **Manage**
+
     ![alt text](Images/Create-secret.png)
+
     ![alt text](Images/Add-secret.png)
+
 6. Copy the secret
+    
     ![alt text](Images/Copy-secret.png)
+
 7. Navigate to **API permissions** under **Manage**. Click **+ Add a permission**. In the pop-up select **Microsoft Graph**. Then select **Application permissions** block. 
+
 8. Ensure below application permissions are added
     * Group.Read.All
     * TeamsAppInstallation.Read.All
+
 9. Click on **Grant admin consent...** button to grant the selected permissions
+
     ![alt text](Images/Graph-perms.png)
     
     NOTE: If you do not grant admin consent, the access token fetched will not have the right scopes and the graph query will results in a 403 error.
