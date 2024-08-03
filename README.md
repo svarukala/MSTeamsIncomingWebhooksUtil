@@ -1,6 +1,7 @@
 # MS Teams IncomingWebhooks Util
 
 This repo has two script options and a 3rd option using Purview Audit log search.
+In this page you will also find step on how to invoke incoming webhooks in Power Automate Flow that is limited to Tenant users only or a subsset of users.
 
 ## Option 1: **List-TeamsWithConenctors.ps1**
 
