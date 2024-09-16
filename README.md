@@ -3,7 +3,9 @@
 This repo has two script options and a 3rd option using Purview Audit log search.
 In this page you will also find step on how to invoke incoming webhooks in Power Automate Flow that is limited to Tenant users only or a subsset of users.
 
-## Option 1: **List-TeamsWithConenctors.ps1**
+## Option 1: **List-TeamsWithConenctors.ps1** -or- **List-TeamsWithConenctors-Batched.ps1**
+
+**Update**: recommend to use the batched version of the script for better performance.
 
 This script is comprehensive as it outputs all the connectors (including incoming webhooks, 1st and 3rd party connectors) used in all the Teams in your Tenant. And this script can by run by the global admin and doesnt need any additional setup requirements.
 
